@@ -69,7 +69,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        article {
+        .text {
             flex: 0 0 calc(45% - 20px);
             margin: 10px;
             background-color: #fff;
@@ -102,42 +102,68 @@
     </header>
 
     <nav>
-        <a href="main.html">Trang Chủ</a> |
+        <ul>
+            <li><a href="main.html">Trang Chủ</a></li> |
+            <li><a href="about.html">Giới Thiệu</a></li> |
+            <li><a href="news.html">Tin Tức</a></li> |
+            <li>
+                <a href="products.html">Sản Phẩm</a> |
+                <ul>
+                    <li><a href="#">Gundam SD</a></li>
+                    <li><a href="#">Gundam HG</a></li>
+                    <li><a href="#">Gundam RG</a></li>
+                    <li><a href="#">Gundam MG</a></li>
+                    <li><a href="#">Gundam PG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Liên Hệ</a>
+                <ul>
+                    <li><a href="#">Email: truckien626@gmail.com</a></li>
+                    <li><a href="#">SĐT: 0363789548</a></li>
+                    <li><a href="https://www.facebook.com/Namelessking2077/" target="_blank">Facebook: Nguyễn Trực Kiên</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <nav>
         <a href="#">Gundam SD</a> |
         <a href="#">Gundam HG</a> |
         <a href="#">Gundam RG</a> |
         <a href="#">Gundam MG</a> |
         <a href="#">Gundam PG</a> 
     </nav>
-
     <section>
-        <article>
-            <h2>DÀN GUNPLA TỪ GUNDAM BUILD METAVERSE SẮP ĐỔ BỘ Gunpla World!!!</h2>
-            <img src="img/gunpla_gundam_build_metaverse_nshop_128dd603d83849c980d7790b9a244c14.webp" alt="Ảnh minh họa cho bài viết 1">
-            <p>Gundam Build Metaverse bao gồm ba tập phim ngắn sẽ chiếu miễn phí vào tháng 10 năm nay để kỷ niệm 10 năm Gundam Build. Bộ phim được mô tả là chứa đựng những trận chiến trong mơ sẽ khiến các fan phấn kích. Đi kèm với đó là màn ra mắt của các Gundam, mobile suit mới.</p>
-            <a href="#">Đọc tiếp</a>
-        </article>
-
-        <article>
-            <h2>5 MẪU GUNDAM NÊN MUA CHO NGƯỜI MỚI BẮT ĐẦU CHƠI GUNPLA</h2>
-            <img src="img/top_gundam_nen_mua_cho_nguoi_choi_moi_gia_re_38edfbf611c54a89aa6687104f74819d_grande.jpg" alt="Ảnh minh họa cho bài viết 2">
-            <p>Có rất nhiều bạn thấy hứng thú với các mẫu mô hình lắp ráp Gundam đầy mê hoặc, cũng muốn thử bắt đầu tập tành chơi Gunpla nhưng ngặt nỗi, Bandai lại có tới hơn trăm mẫu muôn hình muôn kiểu khiến bạn hoang mang không biết Gundam nên mua là mẫu nào. Kit nào cũng đẹp, kit nào cũng ưng mà sợ ráp không nổi, vậy thì phải làm sao đây?</p>
-            <a href="#">Đọc tiếp</a>
-        </article>
-
-        <article>
-            <h2>GUNPLA BUILDERS WORLD CUP VIỆT NAM - TRỔ TÀI SÁNG TẠO</h2>
-            <img src="img/huong_dan_dang_ky_tham_gia_gunpla_builders_world_cup_viet_nam_11_nshop_1e2f0d3868a742db8154a9ebe431aa5b.jpg" alt="Ảnh minh họa cho bài viết 2">
-            <p>GUNPLA BUILDERS WORLD CUP (GBWC) đã quay lại Việt Nam. Cuộc thi không còn xa lạ với các fan Gundam nói riêng và cộng đồng yêu thích mô hình nói chung. Tại đây, bạn có thể phát huy kỹ năng tạo ra những mẫu Gunpla độc đáo của mình, cũng như giao lưu với nhiều anh tài khác. Một sân chơi được chính Bandai tổ chức mang tính toàn cầu cùng những phần thưởng hấp dẫn.</p>
-            <a href="#">Đọc tiếp</a>
-        </article>
-
-        <article>
-            <h2>CHƠI GUNDAM THỜI HIỆN ĐẠI, ĐÃ ĐẾN LÚC BẠN BỎ QUA MỌI CHẤP NIỆM XƯA CŨ</h2>
-            <img src="img/230217_choi_gundam_thoi_hien_dai_nshop2_5fb1f602520f41b489af1bf8905fe186.webp" alt="Ảnh minh họa cho bài viết 2">
-            <p>“Chấp niệm” thời nào, việc nào cũng có, kể cả trong giới chơi Gundam. Nếu bạn đu thành công thú vui này một thời gian đã lâu, chắc chắn ít nhiều đã có trong mình nhiều kinh nghiệm. Lẽ dĩ nhiên ấy mà, kinh nghiệm càng nhiều, chấp niệm cũng nhiều hơn.</p>
-            <a href="#">Đọc tiếp</a>
-        </article>
+        <div class="text">
+            <article>
+                <h2>DÀN GUNPLA TỪ GUNDAM BUILD METAVERSE SẮP ĐỔ BỘ Gunpla World!!!</h2>
+                <img src="img/gunpla_gundam_build_metaverse_nshop_128dd603d83849c980d7790b9a244c14.webp" alt="Ảnh minh họa cho bài viết 1">
+                <p>Gundam Build Metaverse bao gồm ba tập phim ngắn sẽ chiếu miễn phí vào tháng 10 năm nay để kỷ niệm 10 năm Gundam Build. Bộ phim được mô tả là chứa đựng những trận chiến trong mơ sẽ khiến các fan phấn kích. Đi kèm với đó là màn ra mắt của các Gundam, mobile suit mới.</p>
+                <a href="#">Đọc tiếp</a>
+            </article>
+    
+            <article>
+                <h2>5 MẪU GUNDAM NÊN MUA CHO NGƯỜI MỚI BẮT ĐẦU CHƠI GUNPLA</h2>
+                <img src="img/top_gundam_nen_mua_cho_nguoi_choi_moi_gia_re_38edfbf611c54a89aa6687104f74819d_grande.jpg" alt="Ảnh minh họa cho bài viết 2">
+                <p>Có rất nhiều bạn thấy hứng thú với các mẫu mô hình lắp ráp Gundam đầy mê hoặc, cũng muốn thử bắt đầu tập tành chơi Gunpla nhưng ngặt nỗi, Bandai lại có tới hơn trăm mẫu muôn hình muôn kiểu khiến bạn hoang mang không biết Gundam nên mua là mẫu nào. Kit nào cũng đẹp, kit nào cũng ưng mà sợ ráp không nổi, vậy thì phải làm sao đây?</p>
+                <a href="#">Đọc tiếp</a>
+            </article>
+    
+            <article>
+                <h2>GUNPLA BUILDERS WORLD CUP VIỆT NAM - TRỔ TÀI SÁNG TẠO</h2>
+                <img src="img/huong_dan_dang_ky_tham_gia_gunpla_builders_world_cup_viet_nam_11_nshop_1e2f0d3868a742db8154a9ebe431aa5b.jpg" alt="Ảnh minh họa cho bài viết 2">
+                <p>GUNPLA BUILDERS WORLD CUP (GBWC) đã quay lại Việt Nam. Cuộc thi không còn xa lạ với các fan Gundam nói riêng và cộng đồng yêu thích mô hình nói chung. Tại đây, bạn có thể phát huy kỹ năng tạo ra những mẫu Gunpla độc đáo của mình, cũng như giao lưu với nhiều anh tài khác. Một sân chơi được chính Bandai tổ chức mang tính toàn cầu cùng những phần thưởng hấp dẫn.</p>
+                <a href="#">Đọc tiếp</a>
+            </article>
+    
+            <article>
+                <h2>CHƠI GUNDAM THỜI HIỆN ĐẠI, ĐÃ ĐẾN LÚC BẠN BỎ QUA MỌI CHẤP NIỆM XƯA CŨ</h2>
+                <img src="img/230217_choi_gundam_thoi_hien_dai_nshop2_5fb1f602520f41b489af1bf8905fe186.webp" alt="Ảnh minh họa cho bài viết 2">
+                <p>“Chấp niệm” thời nào, việc nào cũng có, kể cả trong giới chơi Gundam. Nếu bạn đu thành công thú vui này một thời gian đã lâu, chắc chắn ít nhiều đã có trong mình nhiều kinh nghiệm. Lẽ dĩ nhiên ấy mà, kinh nghiệm càng nhiều, chấp niệm cũng nhiều hơn.</p>
+                <a href="#">Đọc tiếp</a>
+            </article>
+        </div>
         <!-- Thêm các bài viết khác tương tự -->
     </section>
 
