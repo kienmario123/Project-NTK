@@ -1,0 +1,151 @@
+<!-- products.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - Gunpla World</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header p {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        header .back-button {
+            color: #fff;
+            text-decoration: none;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 16px;
+        }
+
+        .product-item {
+            width: 15%; 
+            margin: 10px;
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05); 
+        }
+
+        .product-item img {
+            max-width: auto;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" onclick="goBack()" class="back-button">Quay Trở Lại</a>
+        <h1><p style="color: #ff0000;">Sản Phẩm - Gunpla World</p></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Trang Chủ</a></li> |
+            <li><a href="about.html">Giới Thiệu</a></li> |
+            <li><a href="news.html">Tin Tức</a></li> |
+            <a href="products.html">Sản Phẩm</a> |
+            <li>
+                <a href="#">Liên Hệ</a>
+                <!-- Thêm submenu cho mục "Liên Hệ" -->
+                <ul>
+                    <li><a href="#">Email: truckien626@gmail.com</a></li>
+                    <li><a href="#">SĐT: 0363789548</a></li>
+                    <li><p>Facebook:  <a href="https://www.facebook.com/Namelessking2077/" target="_blank">Nguyễn Trực Kiên</a></p></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="products">
+        <h2>Sản Phẩm</h2>
+        <ul id="product-list">
+            <li class="product-item">
+                <img src="img/UNICORN GUNDAM (PG - 160).webp" alt="UNICORN GUNDAM (PG - 160)">
+                <p>UNICORN GUNDAM (PG - 160)</p>
+                <p style="color: #ff0000;">Giá: 4,671,000 ₫</p>
+            </li>
+            <li class="product-item">
+                <img src="img/astray red frame.webp" alt="Product 2">
+                <p>MBF-P02 GUNDAM ASTRAY RED FRAME - PG 1/60</p>
+                <p style="color: #ff0000;">Giá: 4,761,000 ₫</p>
+            </li>
+            <li class="product-item">
+                <img src="img/exia.webp" alt="Product 3">
+                <p>GUNDAM EXIA - PG 1/60</p>
+                <p style="color: #ff0000;">Giá: 4,761,000 ₫</p>
+            </li>
+            <li class="product-item">
+                <img src="img/rx-78-2_gundam_pg_unleashed_13775b3f1cdc41f883fc06a0fadd4bc5_master.webp" alt="Product 3">
+                <p>RX-78-2 GUNDAM PG UNLEASHED 1/60</p>
+                <p style="color: #ff0000;">Giá: 7,191,000 ₫</p>
+            </li>
+            <li class="product-item">
+                <img src="img/unicorn_gundam_02_banshee_norn__pg_-_160__a6d60d059afc4dd7949ae27f32dbe7c9_master.webp    " alt="Product 3">
+                <p>UNICORN GUNDAM 02 BANSHEE NORN (PG - 1/60)</p>
+                <p style="color: #ff0000;">Giá: 5,841,000 ₫</p>
+            </li>
+
+        <ul id="product-list">
+            <li class="product-item">
+                <img src="img/UNICORN GUNDAM (PG - 160).webp" alt="UNICORN GUNDAM (PG - 160)">
+                <p>UNICORN GUNDAM (PG - 160)</p>
+                <p style="color: #ff0000;">Giá: 4,671,000 ₫</p>
+            </li>
+            <li class="product-item">
+                <img src="img/astray red frame.webp" alt="Product 2">
+                <p>MBF-P02 GUNDAM ASTRAY RED FRAME - PG 1/60</p>
+                <p style="color: #ff0000;">Giá: 4,761,000 ₫</p>
+            </li>
+            <li class="product-item">
+                <img src="img/product3.jpg" alt="Product 3">
+                <p>Tên sản phẩm 3</p>
+            </li>
+            <li class="product-item">
+                <img src="img/product4.jpg" alt="Product 3">
+                <p>Tên sản phẩm 4</p>
+            </li>
+            <li class="product-item">
+                <img src="img/product5.jpg" alt="Product 3">
+                <p>Tên sản phẩm 5</p>
+            </li>
+            <!-- Add more product items as needed -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>Bản quyền © 2023. Nguyen Truc Kien. Được thiết kế bởi Kien!</p>
+    </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
