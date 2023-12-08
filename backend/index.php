@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunpla World</title>
-    <link rel="stylesheet" href="backend/style.css">
-    <link rel="icon" href="backend/logo4-removebg-preview.png" type="image/x-icon">
+    <title>AdminGW</title>
+    <link rel="stylesheet" href="backend/css/styleadmin.php">
 </head>
 <body>
- <?php 
-    include("pages/header.php");
-    include("pages/home.php");
-    include("pages/footer.php");
-  ?>
-
-    
+    <h3 class="title-admin">Welcome to AdminGW</h3>
+    <?php 
+        include("modules/header.php");
+        include("modules/menu.php");
+        include("modules/main.php");
+        include("modules/footer.php");
+    ?>
 </body>
 </html>
