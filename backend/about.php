@@ -1,0 +1,137 @@
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .text {
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+        }
+
+        header, nav, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header p {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        header .back-button {
+            color: #fff;
+            text-decoration: none;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 16px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        section {
+            padding: 30px;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Canh giữa nội dung trong section */
+        }
+
+        section h2 {
+            margin-bottom: 20px; /* Khoảng cách dưới cho phần tiêu đề */
+        }
+
+        section p {
+            margin-bottom: 20px;
+        }
+
+        section img {
+            max-width: 70%;
+            height: auto;
+            margin: auto;;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" onclick="goBack()" class="back-button">Quay Trở Lại</a>
+        <h1 style="color: #ff0000;">Giới Thiệu - Gunpla World</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Trang Chủ</a></li> |
+            <li><a href="about.html">Giới Thiệu</a></li> |
+            <li><a href="news.html">Tin Tức</a></li> |
+            <li>
+                <a href="products.html">Sản Phẩm</a> |
+                <ul>
+                    <li><a href="#">Gundam SD</a></li>
+                    <li><a href="#">Gundam HG</a></li>
+                    <li><a href="#">Gundam RG</a></li>
+                    <li><a href="#">Gundam MG</a></li>
+                    <li><a href="#">Gundam PG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Liên Hệ</a>
+                <ul>
+                    <li><a href="#">Email: truckien626@gmail.com</a></li>
+                    <li><a href="#">SĐT: 0363789548</a></li>
+                    <li><a href="https://www.facebook.com/Namelessking2077/" target="_blank">Facebook: Nguyễn Trực Kiên</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="text">
+            <h2><b>*Thế Giới Gunpla*</b></h2>
+        <p><strong>Gundam (ガンダム Gandamu?) là dòng sản phẩm truyền thông khoa học viễn tưởng được sản xuất bởi Sunrise, dòng sản phẩm này xoay quanh những người máy khổng lồ (mecha) với tên gọi "Gundam". Dòng sản phẩm này được khởi đầu vào ngày 7 tháng 4 năm 1979 với bộ phim Mobile Suit Gundam, bộ phim cùng với các sản phẩm phụ đã tạo ra một dòng sản phẩm bao gồm phim truyền hình, OVAs, phim điện ảnh, truyện tranh, tiểu thuyết và trò chơi điện tử. Cùng với đó là cả một ngành công nghiệp Mô hình người máy, được biết đến với cái tên Gunpla. Gunpla chiếm 90% thị trường mô hình nhân vật[1].
+
+            Gundam đã thu về hơn 5 tỷ USD bán lẻ vào năm 2000[2]. Năm 2014, doanh thu hằng năm của dòng Gundam đạt 80 tỷ Yên, trong đó 18.4 tỷ là từ doanh thu bán lẻ mặt hàng đồ chơi và sản phẩm sưu tầm. Tháng 6 năm 2018[3], Gundam đứng thứ 15 trong số các dòng sản phẩm truyền thông có doanh thu cao nhất mọi thời đại, ước tính đã thu về hơn 15 tỷ USD (tương đương 350.575 tỷ đồng)[4].</strong></p>
+        <img src="img/about.jpg" alt="About Image">
+        </div>
+    </section>
+
+    <footer>
+        <p style="color: #ffffff;">Bản quyền © 2023. Nguyen Truc Kien. Được thiết kế bởi Kien!</p>
+    </footer>
+    <script>
+        // Hàm để quay trở lại trang trước đó
+        function goBack() {
+            window.history.back();
+        }
+    </script>
