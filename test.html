@@ -1,110 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Không Biết Bán Gì</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
- body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-    line-height: 1.6;
-}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-h1, h2, p {
-    margin-bottom: 15px;
-}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
-header, nav, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
-}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 
-    nav a {
-        color: #fff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-    }
-    nav a:hover {
-        color: #f8f8f8;
-    }
-    section {
-        padding: 30px;
-        background-color: #fff;
-        margin: 20px 0;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    img {
-        max-width: 15%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: 0;
-    }
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-</style>
-<body>
-    <header>
-        <h1>Shop Không Biết Bạn Gì</h1>
-    </header>
-    
-    <nav>
-        <a href="#home">Trang Chủ</a> |
-        <a href="#about">Giới Thiệu</a> |
-        <a href="#news">Tin Tức</a> |
-        <a href="#products">Sản Phẩm</a> |
-        <a href="#contact">Liên Hệ</a>
-    </nav>
-    
-    <section id="home">
-        <h2>Chào mừng đến với trang chủ!</h2>
-        <p>Xìn chào tất cả các bạn.</p>
-        <img src="logo.png" alt="Home Image">
-    </section>
+    <title>Sunshine | @yield('title')</title>
 
-    <section id="about">
-        <h2>Giới Thiệu</h2>
-        <p>Thông tin giới thiệu.</p>
-        <img src="about-image.jpg" alt="About Image">
-    </section>
+    <!-- Các custom style dành riêng cho từng view -->
+    @yield('custom-css')
+  </head>
+  <body>
+    <!-- Navbar -->
+    @include('backend.layouts.partials.navbar')
+    <!-- End Navbar -->
 
-    <section id="news">
-        <h2>Tin Tức</h2>
-        <p>Các tin tức.</p>
-        <img src="news-image.jpg" alt="News Image">
-    </section>
+    <!-- Main content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            @include('backend.layouts.partials.sidebar')
+            <!-- End sidebar -->
 
-    <section id="products">
-        <h2>Sản Phẩm</h2>
-        <p>Danh sách sản phẩm.</p>
-        <img src="giay.png" alt="Products Image">
-        <p>Giày nike.</p>
-    </section>
+            <!-- Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">@yield('feature-title')</h1>
+                    <small>@yield('feature-description')</small>
+                </div>
+                @yield('content')
+            </main>
+            <!-- End content -->
+        </div>
+    </div>
+    <!-- End main content -->
 
-    <section id="contact">
-        <h2>Thông tin liên hệ</h2>
-        <p>Email: truckien626@gmail.com</p>
-        <p>SĐT: 0363789548</p>
-        <p>Facebook: Nguyễn Trực Kiên</p>
-    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/popperjs/popper.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
-    <footer>
-        <p>Bản quyền © 2023. Nguyen Truc Kien. Được thiết kế bởi Kien!</p>
-    </footer>
-</body>
+    <!-- Các custom script dành riêng cho từng view -->
+    @yield('custom-scripts')
+  </body>
 </html>
