@@ -8,7 +8,7 @@
     <link rel="icon" href="img/logo4-removebg-preview.png" type="image/x-icon">
 </head>
 <body>
- <?php 
+ <?php
     include("pages/header.php");
     include("pages/home.php");
     include("pages/contact.php");
