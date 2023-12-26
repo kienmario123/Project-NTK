@@ -20,7 +20,7 @@
     $tinhtrang = $_POST["tinhtrang"];
 
 if(isset($_POST["themsanpham"])){
-    $sql_them = "INSERT INTO ntk_products(tenproducts,maproducts,giaproducts,soluong,hinhanh,tomtat,noidung,tinhtrang) VALUE('".$tenproducts."','".$maproducts."','".$giaproducts."','".$soluong."','".$hinhanh."','".$tomtat."','".$noidung."','".$tinhtrang."')";
+    $sql_them = "INSERT INTO ntk_products(tenproducts,maproducts,giaproducts,soluong,hinhanh,tomtat,noidung,tinhtrang) VALUES ('".$tenproducts."','".$maproducts."','".$giaproducts."','".$soluong."','".$hinhanh."','".$tomtat."','".$noidung."','".$tinhtrang."')";
     mysqli_query($mysqli,$sql_them);
     move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh); 
     header("Location: ../index.php?action=quanlysanpham&query=them");
