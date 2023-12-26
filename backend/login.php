@@ -1,5 +1,27 @@
 <?php
     session_start();
+    $mysqli = new mysqli("localhost","root","","project");
+
+    // Check connection
+    if ($mysqli->connect_errno) {
+    echo "Kết nối MYSQLI lỗi" . $mysqli->connect_error;
+    exit();
+    }
+    if(isset($_POST['dangnhap'])){
+        $taikhoan = $_POST['username'];
+        $matkhau = md5($_POST['password']);
+        $sql = "SELECT * FROM tbl_admin WHERE username='".$taikhoan."' AND password='".$matkhau."' LIMIT 1";
+        $row = mysqli_query($mysqli,$sql);
+        $count = mysqli_num_rows($row);
+        if($count>0){
+            $_SESSION['dangnhap'] = $taikhoan;
+            header("Location:admin/index.php");
+        }else{
+            echo '<script>alert("Tài khoản hoặc Mật khẩu không đúng, vui lòng nhập lại.");</script>';
+            header("Location:login.php");
+        }
+    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +100,7 @@
 <body>
     <a href="../backend/index.php" onclick="goBack()" class="back-button">Quay Trở Lại</a>
     <div class="wrapper-login">
-        <form action="" method="POST" class="form-sign-in" id="form-sign-in">
+        <form action="" autocomplete="off" method="POST">
             <table border="1" class="table-login" style="text-align: center;">
                 <tr>
                     <td colspan="2"><h3>Đăng nhập GW</h3></td>
@@ -106,5 +128,6 @@
         </form>
         <form action="./backend/signin.php" class="change-sign-up"></form>
     </div>
+<script type="text/javascript" src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
 </body>
 </html>

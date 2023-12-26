@@ -1,12 +1,30 @@
-<?php
-    $mysqli = new mysqli("localhost","root","","project");
+if(isset($_POST['dangky'])) {
+        $tenkhachhang = $_POST['hovaten'];
+        $email = $_POST['email'];
+        $dienthoai = $_POST['dienthoai'];
+        $matkhau = md5($_POST['matkhau']);
+        $diachi = $_POST['diachi'];          
+        $sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(tenkhachhang,email,diachi,matkhau,dienthoai) VALUE('".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$dienthoai."')");
+        if($sql_dangky){
+            echo '<p style="color:green">Bạn đã đăng ký thành công</p>';
+        }
 
-    // Check connection
-    if ($mysqli->connect_errno) {
-    echo "Kết nối MYSQLI lỗi" . $mysqli->connect_error;
-    exit();
-    }
+            <?php
+    if(isset($_POST['dangky'])) {
+        $tenkhachhang = $_POST['hovaten'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $dienthoai = $_POST['dienthoai'] ?? '';
+        $matkhau = md5($_POST['matkhau'] ?? '');
+        $diachi = $_POST['diachi'] ?? '';          
+        $sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(tenkhachhang,email,diachi,matkhau,dienthoai) VALUE('".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$dienthoai."')");
+        if($sql_dangky){
+            echo '<p style="color:green">Bạn đã đăng ký thành công</p>';
+        }
+    }    
 
+?>
+
+<?php 
     $tenproducts = $_POST["tenproducts"];
     $maproducts = $_POST["maproducts"];
     $giaproducts = $_POST["giaproducts"];
@@ -23,7 +41,7 @@ if(isset($_POST["themsanpham"])){
     $sql_them = "INSERT INTO ntk_products(tenproducts,maproducts,giaproducts,soluong,hinhanh,tomtat,noidung,tinhtrang) VALUE('".$tenproducts."','".$maproducts."','".$giaproducts."','".$soluong."','".$hinhanh."','".$tomtat."','".$noidung."','".$tinhtrang."')";
     mysqli_query($mysqli,$sql_them);
     move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh); 
-    header("Location: ../index.php?action=quanlysanpham&query=them");
+    // header("Location: ../index.php?action=quanlysanpham&query=them");
 }elseif(isset($_POST['suasanpham'])){
     //sua
     $sql_update = "UPDATE tbl_sanpham SET tensanpham='".$tenloaisp."',thutu='".$thutu."' WHERE id_sanpham=$_GET[idsanpham]";

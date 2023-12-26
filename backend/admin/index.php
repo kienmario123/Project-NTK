@@ -9,6 +9,12 @@
     <title>AdminGW</title>
     <link rel="stylesheet" href="./../css/styleadmin.css">
 </head>
+<?php
+  session_start();
+  if(!isset($_SESSION['dangnhap'])){
+    header('Location:../login.php');
+  }
+?>
 <body>
   <h3 class="title-admin">Welcome to AdminGW</h3>
   <div class="wrapper">

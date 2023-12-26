@@ -1,5 +1,23 @@
 <?php
     session_start();
+    $mysqli = new mysqli("localhost","root","","project");
+
+    // Check connection
+    if ($mysqli->connect_errno) {
+    echo "Kết nối MYSQLI lỗi" . $mysqli->connect_error;
+    exit();
+    }
+    if(isset($_POST['dangky'])) {
+        $tenkhachhang = $_POST['hovaten'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $dienthoai = $_POST['dienthoai'] ?? '';
+        $matkhau = md5($_POST['matkhau'] ?? '');
+        $diachi = $_POST['diachi'] ?? '';          
+        $sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(tenkhachhang,email,diachi,matkhau,dienthoai) VALUE('".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$dienthoai."')");
+        if ($sql_dangky) {
+            echo '<p style="color:green">Bạn đã đăng ký thành công</p>';
+        }
+    }    
 
 ?>
 <!DOCTYPE html>
@@ -73,36 +91,31 @@
             <td colspan="2"><h3><b>Đăng kí GW</b></h3></td>
         </tr>
         <tr>
-            <td><b>Tên Tài khoản</b></td>
-            <td><input type="text" name="username"></td>
-        </tr>
-        <tr>
-            <td><b>Mật khẩu</b></td>
-            <td><input type="password" name="password"></td>
-        </tr>
-        <tr>
-            <td><b>Nhập lại Mật khẩu</b></td>
-            <td><input type="password" name="password"></td>
+            <td><b>Họ và tên</b></td>
+            <td><input type="text" size="50" name="hovaten"></td>
         </tr>
         <tr>
             <td><b>Email</b></td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" size="50" name="email"></td>
         </tr>
         <tr>
-            <td><b>Nhập lại Email</b></td>
-            <td><input type="text" name="repemail"></td>
+            <td><b>Điện thoại</b></td>
+            <td><input type="text" size="50" name="dienthoai"></td>
         </tr>
         <tr>
-            <td><b>Số Điện Thoại</b></td>
-            <td><input type="text" name="sdt"></td>
+            <td><b>Địa chỉ</b></td>
+            <td><input type="text" size="50" name="diachi"></td>
+        </tr>
+        <tr>
+            <td><b>Mật khẩu</b></td>
+            <td><input type="password" size="50" name="matkhau"></td>
         </tr>
         <tr>
             
-            <td colspan="2"><input class="nutdangky" type="submit" name="dangki" value="Đăng Ký"></td>
+            <td colspan="2"><input class="nutdangky" type="submit" name="dangky" value="Đăng Ký"></td>
         </tr>
     </table>
     </form>
 </div> 
 </body>
 </html>
- 

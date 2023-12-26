@@ -9,6 +9,7 @@
 </head>
 <body>
  <?php
+    include("config/config.php");
     include("pages/header.php");
     include("pages/home.php");
     include("pages/contact.php");
