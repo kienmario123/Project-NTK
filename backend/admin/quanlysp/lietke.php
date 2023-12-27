@@ -1,5 +1,5 @@
 <?php
-    $sql_lietke_danhmucsp = "SELECT * FROM tbl_sanpham ORDER BY thutu ASC";
+    $sql_lietke_danhmucsp = "SELECT * FROM tbl_danhmuc ORDER BY thutu ASC";
     $query_lietke_danhmucsp = mysqli_query($mysqli,$sql_lietke_danhmucsp);
 ?>
 <p>Liệt kê danh mục sản phẩm</p>
@@ -19,8 +19,8 @@
         <td><?php echo $i ?></td>
         <td><?php echo $row['tensanpham'] ?></td>
         <td>
-            <a href="?action=quanlydanhmucsanpham&query=sua&idsanpham=<?php echo $row['id_sanpham'] ?>">Sửa</a> | 
-            <a href="./quanlydanhmucsp/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>">Xoá</a>
+            <a href="?action=quanlydanhmucsanpham&query=sua&idsanpham=<?php echo $row['id_danhmuc'] ?>">Sửa</a> | 
+            <a href="./quanlydanhmucsp/xuly.php?idsanpham=<?php echo $row['id_danhmuc'] ?>">Xoá</a>
         </td>
     </tr>
     <?php

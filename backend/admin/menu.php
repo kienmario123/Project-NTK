@@ -1,5 +1,5 @@
 <?php
-    $sql_danhmuc = "SELECT * FROM tbl_sanpham ORDER BY id_sanpham DESC";
+    $sql_danhmuc = "SELECT * FROM tbl_danhmuc ORDER BY id_danhmuc DESC";
     $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
     
 ?>
