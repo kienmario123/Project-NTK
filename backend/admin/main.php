@@ -15,10 +15,10 @@
             include("quanlydanhmucsp/lietke.php");
         }elseif ($tam == "quanlydanhmucsanpham" &&  $query=='sua') {
             include("quanlydanhmucsp/sua.php");
-        }elseif ($tam == "quanlysanpham" &&  $query=='them') {
+        }elseif ($tam == "quanlysp" &&  $query=='them') {
             include("quanlysp/them.php");
             include("quanlysp/lietke.php");
-        }elseif($tam == "quanlysanpham" &&  $query=='sua'){
+        }elseif($tam == "quanlysp" &&  $query=='sua'){
             include("quanlysp/sua.php");
         }
         else{

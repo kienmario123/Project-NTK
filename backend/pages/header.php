@@ -1,11 +1,12 @@
 <header>
-        <form action="./login.php" method="post">
+        <div class ="dangnhapdangky">
+            <form action="./login.php" method="post">
             <input type="submit" name="Login" value= Login>
         </form>
-
         <form action="./signin.php" method="post">
             <input type="submit" name="sign-in" value="Sign In">
         </form> 
+        </div>
         <img src="../img/logo4-removebg-preview.png" alt="Logo" class="logo">
         <h1 style="color: #ff0000;">Gunpla World</h1>
     </header>
