@@ -9,7 +9,7 @@
     
     <li><a href="index.php?action=quanlysp&query=them"><b>Quản lý sản phẩm</b></a></li>
     
-    <li><a href="index.php?action=quanlydanhmucbaiviet&query=them"><b>Quản lý danh mục bài viết</b></a></li>
-    <li><a href="index.php?action=quanlybaiviet&query=them"><b>Quản lý bài viết</b></a></li>
+    <!-- <li><a href="index.php?action=quanlydanhmucbaiviet&query=them"><b>Quản lý danh mục bài viết</b></a></li>
+    <li><a href="index.php?action=quanlybaiviet&query=them"><b>Quản lý bài viết</b></a></li> -->
     
 </ul>

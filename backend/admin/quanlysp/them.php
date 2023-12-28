@@ -45,18 +45,6 @@
             </select>
         </td>
     </tr>
-    <!-- <tr>
-        <td>Danh mục sản phẩm</td>
-        <td>
-            <select name="tinhtrang_sanpham">
-                <?php
-                $sql_danhmuc = "SELECT * FROM tbl_danhmuc"
-                ?>
-                <option value="1">Kích hoạt</option>
-                
-            </select>
-        </td>
-    </tr> -->
     <tr>
         <td>Tình trạng</td>
         <td>

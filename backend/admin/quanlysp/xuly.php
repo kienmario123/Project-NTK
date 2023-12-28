@@ -2,13 +2,9 @@
     $connect = new mysqli("localhost","root","","project");
 
     // Check connection
-    if ($connect->connect_errno) {
-    echo "Kết nối MYSQLI lỗi" . $connect->connect_error;
-    exit();
+    if ($connect->error) {
+        echo "SQL error: " . $connect->error;
     }
-
-    
-    
 
 if(isset($_POST["themsanpham"])){
     $ten_sanpham = $_POST["ten_sanpham"];
